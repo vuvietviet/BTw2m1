@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsTest4</title>
+</head>
+<body>
+    Nhập số:
+    <input type="number" name="so" id="nhap"/><br/>
+    Hệ số:
+    <select id="heSo">
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+    </select><br/>
+    <button onclick="nhan()">Show</button>
+
+</body>
+</html>
+
+<script>
+    function nhan() {
+       let a = document.getElementById('nhap').value;
+       let b = document.getElementById('heSo').value;
+       alert("Kết quả là: " + a*b);
+    }
+</script>
