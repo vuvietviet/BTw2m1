@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đăng nhập</title>
+</head>
+<body>
+<script>
+    let name = prompt('Tên của bạn là: ', '');
+    if (name == 'Admin') {
+        let password = prompt('Mật khẩu là: ','');
+        if (password == 'TheMaster') {
+            alert('Welcome');
+        }else if (password == null) {
+            alert('Canceled');
+        }else {
+            alert('Wrong password');
+        }
+    }else if (name == null) {
+        alert('canceled');
+    }else {
+        alert("I don't know you");
+    }
+</script>
+</body>
+</html>
