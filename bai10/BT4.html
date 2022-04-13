@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body onload="welcome()">
+<div>
+    <img onclick="changePic1()" id="pic1" src="1.jpg" alt="" height="100px" width="500px"><br/>
+    <img onclick="changePic2()" id="pic2" src="2.jpg" alt="" height="100px" width="500px"><br/>
+    <img onclick="changePic3()" id="pic3" src="3.jpg" alt="" height="100px" width="500px">
+</div>
+</body>
+</html>
+
+<script>
+    let picExtend =".jpg"
+    let picPre = 1
+    let img1 = document.getElementById('pic1')
+    let img2 = document.getElementById('pic2')
+    let img3 = document.getElementById('pic3')
+    function changePic1(){
+        if (picPre == 1){
+            picPre = 2;
+        }else if (picPre == 2){
+            picPre = 3;
+        }else if(picPre == 3){
+            picPre = 4;
+        }else if (picPre == 4){
+            picPre = 5;
+        }else {
+            picPre = 1;
+        }
+        img1.src = picPre + picExtend;
+        ghep()
+    }
+    function changePic2(){
+        if (picPre == 1){
+            picPre = 2;
+        }else if (picPre == 2){
+            picPre = 3;
+        }else if(picPre == 3){
+            picPre = 4;
+        }else if (picPre == 4){
+            picPre = 5;
+        }else {
+            picPre = 1;
+        }
+        img2.src = picPre + picExtend;
+        ghep()
+    }
+    function changePic3(){
+        if (picPre == 1){
+            picPre = 2;
+        }else if (picPre == 2){
+            picPre = 3;
+        }else if(picPre == 3){
+            picPre = 4;
+        }else if (picPre == 4){
+            picPre = 5;
+        }else {
+            picPre = 1;
+        }
+        img3.src = picPre + picExtend;
+        ghep()
+    }
+    function ghep() {
+        if ((img1.src === '3.jpg') || (img1.src === '5.jpg')) {
+            if ((img2.src === '3.jpg') || (img2.src === '5.jpg')) {
+                if ((img3.src === '3.jpg') || (img3.src === '5.jpg')) {
+                    alert('You are right!');
+                }
+            }
+        }
+
+    }
+
+    function welcome() {
+        alert('Welcome!')
+    }
+
+</script>

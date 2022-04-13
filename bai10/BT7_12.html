@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let soTienDau = parseInt(prompt('Nhập số tiền ban đầu: ', ''));
+    let soThangChoVay = parseInt(prompt('Số tháng cho vay là ',''));
+    let phanTram;
+    let total = 0;
+    let tienLai1Thang;
+    for (let i = 1; i <= soThangChoVay; i++) {
+        if (i<=12) {
+            phanTram = 1/200;
+            tienLai1Thang = soTienDau * phanTram;
+            total = total + tienLai1Thang;
+        } else if (i<=24) {
+            phanTram = 1/100;
+            tienLai1Thang = soTienDau * phanTram;
+            total = total + tienLai1Thang;
+        } else {
+            phanTram = 5/100;
+            tienLai1Thang = soTienDau * phanTram;
+            total = total + tienLai1Thang;
+        }
+    }
+    alert('Số tiền lãi của ' + soThangChoVay +
+        ' tháng cho vay với số tiền ban đầu là ' +
+        soTienDau + ' là: ' + total);
+</script>

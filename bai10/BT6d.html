@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm max của 3 số nguyên</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let a = parseInt(prompt('Nhập số nguyên a là: ', ''));
+    let b = parseInt(prompt('Nhập số nguyên b là: ', ''));
+    let c = parseInt(prompt('Nhập số nguyên c là: ', ''));
+    let max = a;
+    if (b>a) {
+        if (b>c) {
+            max = b;
+        }else {
+            max = c;
+        }
+    }else if (c>a) {
+        max = c;
+    }
+    alert(max);
+</script>

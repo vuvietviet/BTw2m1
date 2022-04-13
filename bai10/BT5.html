@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+<h2>Do you love me?</h2>
+<button onclick="yes()">Yes</button>
+<button onmouseover="no()" id="jump" style="position: absolute">No</button>
+</body>
+</html>
+
+<script>
+    function yes() {
+        alert('<3');
+    }
+
+    function no() {
+        let btn = document.getElementById('jump');
+        btn.style.marginTop = Math.random() * window.innerHeight + 'px';
+        btn.style.marginLeft = Math.random() * window.innerWidth + 'px';
+    }
+</script>
