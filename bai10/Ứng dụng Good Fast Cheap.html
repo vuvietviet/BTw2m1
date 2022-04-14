@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Good Fast Cheap</title>
+</head>
+<body>
+<input type="checkbox" id="box1" onclick="check()"/> Good<br/>
+<input type="checkbox" id="box2" onclick="check()"/> Fast<br/>
+<input type="checkbox" id="box3" onclick="check()"/> Cheap
+</body>
+</html>
+
+<script>
+    let count = 1;
+    function check() {
+        let check1 = document.getElementById('box1');
+        let check2 = document.getElementById('box2');
+        let check3 = document.getElementById('box3');
+
+        if ((check1.checked === true) && (check2.checked === true) && (check3.checked === true)) {
+           if (count==1){
+               check3.checked = false;
+               count++
+           } else if (count==2){
+               check2.checked = false;
+               count++
+           }else if (count==3){
+               check1.checked = false;
+               count=1
+           }
+
+        }
+    }
+</script>
